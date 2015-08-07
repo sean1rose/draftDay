@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('draftDayApp')
-  .controller('MainCtrl', function ($scope, $http, socket) {
+  .controller('MainCtrl', function ($scope, $http, socket, DraftInputService) {
     $scope.awesomeThings = [];
 
     $http.get('/api/things').success(function(awesomeThings) {
