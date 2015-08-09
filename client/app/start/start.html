@@ -1,3 +1,35 @@
-<div class="col-md-12">
-This is the start view.
+<div class="col-md-6">
+  
+  <div>
+    League Name:
+    <input class="form-control" ng-change="saveLeagueName()" ng-model="leagueName"></input>
+  </div>
+
+  <br>
+
+  <div>
+    Number of Rounds:
+    <select class="form-control" ng-change="saveRoundAmount()" ng-init="roundSelect = numberOfRounds[0]" ng-options="round.number for round in numberOfRounds" ng-model="roundSelect"></select>
+      <div>{{roundSelect}} </div>
+  </div>
+
+  <br>
+
+  <div>
+    Number of Teams:
+    <select class="form-control" ng-change="saveTeamAmount()" ng-init="teamSelect = numberOfTeams[0]" ng-options="team.number for team in numberOfTeams" ng-model="teamSelect"></select>
+      <div>{{teamSelect}}</div>
+  </div>
+
+  <br>
+
+  <div>
+    Email Address to send final draft results to:
+    <input class="form-control" ng-change="saveLeagueEmail()" ng-model="leagueEmail"</input>
+  </div>
+
+  <br>
+
+  <button type="button" class="btn btn-success" ng-click="startDraft()">Start Draft!</button>
+
 </div>
